@@ -73,18 +73,69 @@ The initial foothold relies on poor operational security (OpSec): developers lea
     *Result:* `[21][ftp] login: ftpuser   password: 5iez1wGXKfPKQ`
 
 3.  **Retrieving and Decoding Credentials:** We logged into FTP using the discovered credentials and downloaded `Eli's_Creds.txt`. The file contained text that looked like a **Brainfuck** program.
-    ```text
-    +++++ ++++[ ->+++ +++++ +<]>+ +++.< +++++ [->++ +++<] >++++ +.<++ ...
-    ```
-    We used a simple Python script to interpret the Brainfuck code:
+
+    To decode this, I wrote a complete Python interpreter to handle the esoteric syntax.
+
+    **The Decoder Script (`bf_decoder.py`):**
     ```python
     import sys
-    s = open("Eli's_Creds.txt").read()
-    # ... Brainfuck interpreter logic ...
+
+    def brainfuck_interpreter(code):
+        # Sanitize code (only keep valid brainfuck characters)
+        code = "".join([c for c in code if c in "><+-.,[]"])
+        
+        memory = [0] * 30000
+        ptr = 0
+        pc = 0
+        
+        # Precompute loop jumps for efficiency
+        loops = []
+        jumps = {}
+        for i, char in enumerate(code):
+            if char == "[":
+                loops.append(i)
+            elif char == "]":
+                if loops:
+                    start = loops.pop()
+                    jumps[start] = i
+                    jumps[i] = start
+        
+        # Execution loop
+        output = []
+        while pc < len(code):
+            char = code[pc]
+            if char == ">":
+                ptr += 1
+            elif char == "<":
+                ptr -= 1
+            elif char == "+":
+                memory[ptr] = (memory[ptr] + 1) % 256
+            elif char == "-":
+                memory[ptr] = (memory[ptr] - 1) % 256
+            elif char == ".":
+                output.append(chr(memory[ptr]))
+            elif char == "[":
+                if memory[ptr] == 0:
+                    pc = jumps[pc]
+            elif char == "]":
+                if memory[ptr] != 0:
+                    pc = jumps[pc]
+            pc += 1
+        return "".join(output)
+
+    if __name__ == "__main__":
+        if len(sys.argv) > 1:
+            with open(sys.argv[1], "r") as f:
+                print(brainfuck_interpreter(f.read()))
+        else:
+            print("Usage: python3 bf_decoder.py Eli's_Creds.txt")
     ```
-    *Decoded Output:* 
-    `User: eli`
-    `Password: DSpDiM1wAEwid`
+
+    **Decoded Output:**
+    ```text
+    User: eli
+    Password: DSpDiM1wAEwid
+    ```
 
 ---
 
