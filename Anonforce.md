@@ -47,10 +47,10 @@ The FTP server was misconfigured to allow anonymous users to view the **entire r
 
 ---
 
-#### 3. Rabbit Holes & Failed Attempts
-*   **[Direct Shadow Access]**: Attempting to `GET /etc/shadow` directly via FTP.
+#### 3. Misleading Paths & Failed Attempts
+*   **[Misleading Path 1]**: Direct Shadow Access.
 *   **[Why it failed]**: Despite the root directory listing, the file permissions on `/etc/shadow` prevented the `ftp` user from reading it directly.
-*   **[SSH Brute-force]**: Attempting to brute-force `melodias` via SSH.
+*   **[Misleading Path 2]**: SSH Brute-force.
 *   **[Why it failed]**: This is an "Easy" box; the intended path was the cryptographic challenge found in the FTP files.
 
 ---
