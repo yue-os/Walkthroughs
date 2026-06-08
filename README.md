@@ -14,6 +14,7 @@ Welcome to my repository of **Capture The Flag (CTF)** walkthroughs. This is a c
 | [Develpy](./Develpy.md) | TryHackMe | Scripting / PrivEsc | Medium |
 | [Rabbit Store](./RabbitStore.md) | TryHackMe | Web / SSRF / SSTI / PrivEsc | Medium |
 | [Thompson](./Thompson.md) | TryHackMe | Boot2Root / Web / Privilege Escalation | Easy |
+| [Wonderland](./Wonderland.md) | TryHackMe | Boot2Root / Web / PrivEsc | Medium |
 | [Year of the Rabbit](./YearOfTheRabbit.md) | TryHackMe | Boot2Root / Steganography / Privilege Escalation | Easy |
 <!-- END_TABLE -->
 
