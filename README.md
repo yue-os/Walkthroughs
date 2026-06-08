@@ -12,6 +12,7 @@ Welcome to my repository of **Capture The Flag (CTF)** walkthroughs. This is a c
 | [Anonforce](./Anonforce.md) | TryHackMe | Boot2Root / Linux | Easy |
 | [Biohazard](./Biohazard.md) | TryHackMe | Boot2Root | TBD |
 | [Develpy](./Develpy.md) | TryHackMe | Boot2Root | TBD |
+| [Test Automation](./TestChallenge.md) | TryHackMe | Automation | Easy |
 | [Thompson](./Thompson.md) | TryHackMe | Boot2Root / Web / Privilege Escalation | Easy |
 | [Year of the Rabbit](./YearOfTheRabbit.md) | TryHackMe | Boot2Root / Steganography / Privilege Escalation | Easy/Medium |
 <!-- END_TABLE -->
