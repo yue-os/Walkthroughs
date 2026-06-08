@@ -9,6 +9,10 @@ Welcome to my repository of **Capture The Flag (CTF)** walkthroughs. This is a c
 | Challenge | Platform | Category | Difficulty |
 | :--- | :--- | :--- | :--- |
 | [Thompson](./Thompson.md) | TryHackMe | Web / PrivEsc | Easy |
+| [Anonforce](./Anonforce.md) | TryHackMe | Boot2Root / Linux | Easy |
+| [Year of the Rabbit](./YearOfTheRabbit.md) | TryHackMe | Stego / PrivEsc | Easy/Medium |
+| [Biohazard](./Biohazard.md) | TryHackMe | Web / Recon | Easy/Medium |
+| [Develpy](./Develpy.md) | TryHackMe | Scripting / PrivEsc | Medium |
 
 ## 🛠️ Methodology
 
