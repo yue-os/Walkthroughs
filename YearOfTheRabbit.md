@@ -3,7 +3,7 @@
 ## 1. Challenge Overview
 **Name:** Year of the Rabbit  
 **Category:** Boot2Root / Steganography / Privilege Escalation  
-**Difficulty:** Easy/Medium  
+**Difficulty:** Easy  
 **Points/Reward:** N/A (Standard TryHackMe Room)  
 **Challenge Prompt:** 
 > Let's have a nice gentle start to the New Year!

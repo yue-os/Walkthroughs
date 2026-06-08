@@ -13,7 +13,7 @@ Welcome to my repository of **Capture The Flag (CTF)** walkthroughs. This is a c
 | [Biohazard](./Biohazard.md) | TryHackMe | Web / Recon | Medium |
 | [Develpy](./Develpy.md) | TryHackMe | Scripting / PrivEsc | Medium |
 | [Thompson](./Thompson.md) | TryHackMe | Boot2Root / Web / Privilege Escalation | Easy |
-| [Year of the Rabbit](./YearOfTheRabbit.md) | TryHackMe | Boot2Root / Steganography / Privilege Escalation | Easy/Medium |
+| [Year of the Rabbit](./YearOfTheRabbit.md) | TryHackMe | Boot2Root / Steganography / Privilege Escalation | Easy |
 <!-- END_TABLE -->
 
 ## 🛠️ Methodology
