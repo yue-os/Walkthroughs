@@ -1,6 +1,12 @@
 # Develpy CTF Walkthrough - TryHackMe
 
-## 1. Reconnaissance
+## 1. Challenge Overview
+**Name:** Develpy
+**Platform:** TryHackMe
+**Category:** Scripting / PrivEsc
+**Difficulty:** Medium
+
+## 2. Reconnaissance
 
 ### Nmap Scan
 We start with an Nmap scan to identify open ports and services.
@@ -20,7 +26,7 @@ PORT      STATE SERVICE           VERSION
 |     Please enther number of exploits to send??:
 ```
 
-## 2. Initial Access
+## 3. Initial Access
 
 ### Python `input()` Vulnerability
 Connecting to port 10000 reveals a Python service. The prompt asks for a number, but since it's likely using Python 2's `input()` function (which acts like `eval()`), we can inject Python code.
@@ -59,7 +65,7 @@ cat /home/king/user.txt
 
 **Flag:** `cf85ff769cfaaa721758949bf870b019`
 
-## 3. Enumeration & Privilege Escalation
+## 4. Enumeration & Privilege Escalation
 
 ### Piet Password
 There is a file `credentials.png` in the home directory. This is a program written in the esoteric language **Piet**. Decoding it (or searching for its known solution in this room) reveals the password for user `king`.
@@ -95,7 +101,7 @@ nc -lvnp 4446
 
 Wait 1 minute for the cron job to execute.
 
-## 4. Root Access
+## 5. Root Access
 
 ### Root Flag
 After the reverse shell connects, we are root.

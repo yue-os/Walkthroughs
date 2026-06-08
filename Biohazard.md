@@ -2,6 +2,12 @@
 
 [Link to Room](https://tryhackme.com/room/biohazard)
 
+## 1. Challenge Overview
+**Name:** Biohazard
+**Platform:** TryHackMe
+**Category:** Web / Recon
+**Difficulty:** Medium
+
 ## Phase 1: Reconnaissance
 
 ### Nmap Scan
